@@ -1,0 +1,433 @@
+
+/* ========================================
+   ESTILOS GENERALES - ROJO BIKE
+======================================== */
+
+:root {
+    --rojo: #e31824;
+    --rojo-oscuro: #b5121b;
+    --negro: #111111;
+    --negro-claro: #1c1c1c;
+    --blanco: #ffffff;
+    --gris-claro: #f2f2f2;
+    --gris: #cccccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--blanco);
+    color: var(--negro);
+}
+
+
+/* ========================================
+   ENCABEZADO Y MENÚ DE NAVEGACIÓN
+======================================== */
+
+.Encabezado {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    background-color: var(--blanco);
+    border-bottom: 5px solid var(--rojo);
+}
+
+.Logo {
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.Encabezado nav ul {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.Encabezado nav ul li {
+    display: inline-block;
+}
+
+.Encabezado nav ul li a {
+    display: block;
+    padding: 12px 16px;
+
+    color: var(--negro);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+
+    border-radius: 5px;
+
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+.Encabezado nav ul li a:hover {
+    background-color: var(--rojo);
+    color: var(--blanco);
+}
+
+
+/* ========================================
+   SECCIÓN 1 - PRESENTACIÓN
+======================================== */
+
+.seccion1_b_e {
+    width: 100%;
+    padding: 60px 8%;
+
+    background-color: var(--negro);
+    color: var(--blanco);
+
+    text-align: center;
+    border-bottom: 5px solid var(--rojo);
+}
+
+.seccion1_b_e h1 {
+    margin-bottom: 20px;
+
+    color: var(--rojo);
+    font-size: 38px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.seccion1_b_e p {
+    max-width: 900px;
+    margin: 0 auto;
+
+    color: var(--blanco);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   SECCIÓN 2 - CATÁLOGO DE BICICLETAS
+======================================== */
+
+.seccion2_b_e_imagenes {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 50px 8%;
+
+    background-color: var(--blanco);
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: center;
+    align-items: stretch;
+    gap: 35px;
+}
+
+
+/* ========================================
+   TARJETAS DE PRODUCTOS
+======================================== */
+
+.seccion2_b_e_imagen1,
+.seccion2_b_e_imagen2,
+.seccion2_b_e_imagen3,
+.seccion2_b_e_imagen4 {
+    width: 100%;
+    min-width: 0;
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    text-align: center;
+
+    /* Fondo blanco */
+    background-color: #ffffff;
+
+    border: 1px solid var(--gris);
+    border-bottom: 5px solid var(--rojo);
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+/* Efecto al pasar el cursor */
+
+.seccion2_b_e_imagen1:hover,
+.seccion2_b_e_imagen2:hover,
+.seccion2_b_e_imagen3:hover,
+.seccion2_b_e_imagen4:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ========================================
+   IMÁGENES DE LAS BICICLETAS
+======================================== */
+
+.seccion2_b_e_imagenes img {
+    display: block;
+
+    width: 100%;
+    max-width: 380px;
+    height: 240px;
+
+    margin: 0 auto 20px;
+
+    object-fit: contain;
+    object-position: center;
+}
+
+
+/* ========================================
+   NOMBRES DE LOS PRODUCTOS
+======================================== */
+
+.seccion2_b_e_imagenes h1 {
+    width: 100%;
+    margin-bottom: 15px;
+
+    color: var(--negro);
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 1.4;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   DESCRIPCIONES DE LOS PRODUCTOS
+======================================== */
+
+.seccion2_b_e_imagenes p {
+    width: 100%;
+    margin-bottom: 20px;
+
+    color: #444444;
+    font-size: 16px;
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   PRECIOS DE LOS PRODUCTOS
+======================================== */
+
+.seccion2_b_e_imagenes h2 {
+    width: 100%;
+    margin-top: auto;
+
+    color: var(--rojo);
+    font-size: 25px;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   PIE DE PÁGINA - CONTACTO
+======================================== */
+
+.footer_de_la_pagina {
+    width: 100%;
+    padding: 40px 8%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    background-color: var(--negro);
+    color: var(--blanco);
+
+    text-align: center;
+    border-top: 5px solid var(--rojo);
+}
+
+.footer_de_la_pagina p {
+    width: 100%;
+
+    color: var(--blanco);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.footer_de_la_pagina iframe {
+    display: block;
+
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+
+    margin-top: 15px;
+
+    border: 2px solid var(--rojo) !important;
+    border-radius: 10px;
+}
+
+
+/* ========================================
+   DISEÑO RESPONSIVE PARA TABLETAS
+======================================== */
+
+@media (max-width: 900px) {
+
+    .Encabezado {
+        justify-content: center;
+        flex-direction: column;
+        padding: 15px 4%;
+    }
+
+    .Logo {
+        width: 160px;
+    }
+
+    .Encabezado nav ul {
+        gap: 5px;
+    }
+
+    .Encabezado nav ul li a {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+
+    .seccion1_b_e {
+        padding: 45px 5%;
+    }
+
+    .seccion1_b_e h1 {
+        font-size: 32px;
+    }
+
+    .seccion2_b_e_imagenes {
+        padding: 35px 5%;
+        gap: 25px;
+    }
+
+    .seccion2_b_e_imagenes img {
+        height: 210px;
+    }
+
+    .footer_de_la_pagina {
+        padding: 35px 5%;
+    }
+}
+
+
+/* ========================================
+   DISEÑO RESPONSIVE PARA CELULARES
+======================================== */
+
+@media (max-width: 600px) {
+
+    .Encabezado {
+        padding: 15px 3%;
+    }
+
+    .Logo {
+        width: 145px;
+    }
+
+    .Encabezado nav {
+        width: 100%;
+    }
+
+    .Encabezado nav ul {
+        width: 100%;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .Encabezado nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .Encabezado nav ul li a {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .seccion1_b_e {
+        padding: 35px 6%;
+    }
+
+    .seccion1_b_e h1 {
+        font-size: 27px;
+    }
+
+    .seccion1_b_e p {
+        font-size: 16px;
+    }
+
+    .seccion2_b_e_imagenes {
+        grid-template-columns: 1fr;
+        padding: 30px 6%;
+        gap: 25px;
+    }
+
+    .seccion2_b_e_imagen1,
+    .seccion2_b_e_imagen2,
+    .seccion2_b_e_imagen3,
+    .seccion2_b_e_imagen4 {
+        padding: 20px;
+    }
+
+    .seccion2_b_e_imagenes img {
+        height: 220px;
+    }
+
+    .seccion2_b_e_imagenes h1 {
+        font-size: 21px;
+    }
+
+    .seccion2_b_e_imagenes h2 {
+        font-size: 23px;
+    }
+
+    .footer_de_la_pagina {
+        padding: 30px 6%;
+    }
+
+    .footer_de_la_pagina p {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    .footer_de_la_pagina iframe {
+        height: 280px;
+    }
+}
+
+.seccion1_b_e strong {
+    color: var(--rojo);
+}

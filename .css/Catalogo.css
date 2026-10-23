@@ -1,0 +1,490 @@
+
+/* ========================================
+   ESTILOS GENERALES - ROJO BIKE
+======================================== */
+
+:root {
+    --rojo: #e31824;
+    --rojo-oscuro: #b5121b;
+    --negro: #111111;
+    --negro-claro: #1c1c1c;
+    --blanco: #ffffff;
+    --gris-claro: #f2f2f2;
+    --gris: #cccccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--blanco);
+    color: var(--negro);
+}
+
+
+/* ========================================
+   ENCABEZADO Y MENÚ DE NAVEGACIÓN
+======================================== */
+
+.Encabezado {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    background-color: var(--blanco);
+    border-bottom: 5px solid var(--rojo);
+}
+
+.Logo {
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.Encabezado nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.Encabezado nav ul li {
+    display: inline-block;
+}
+
+.Encabezado nav ul li a {
+    display: block;
+    padding: 12px 16px;
+
+    color: var(--negro);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+
+    border-radius: 5px;
+
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+.Encabezado nav ul li a:hover {
+    background-color: var(--rojo);
+    color: var(--blanco);
+}
+
+
+/* ========================================
+   SECCIONES DEL CATÁLOGO
+======================================== */
+
+.seccion1_catalogo_tabla_bdr,
+.seccion2_catalogo_tabla_be {
+    width: 100%;
+    padding: 50px 6%;
+
+    background-color: var(--negro);
+    color: var(--blanco);
+
+    border-bottom: 5px solid var(--rojo);
+}
+
+
+/* Espacio adicional entre las dos tablas */
+
+.seccion2_catalogo_tabla_be {
+    margin-top: 45px;
+}
+
+
+/* ========================================
+   TÍTULOS DE LAS SECCIONES
+======================================== */
+
+.texto_seccion1_catalogo,
+.texto_seccion2_catalogo {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 35px;
+
+    text-align: center;
+}
+
+.texto_seccion1_catalogo h1,
+.texto_seccion2_catalogo h1 {
+    color: var(--rojo);
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.texto_seccion1_catalogo h1::after,
+.texto_seccion2_catalogo h1::after {
+    content: "";
+
+    display: block;
+    width: 100px;
+    height: 4px;
+
+    margin: 18px auto 0;
+
+    background-color: var(--rojo);
+    border-radius: 5px;
+}
+
+
+/* ========================================
+   TABLAS DEL CATÁLOGO
+======================================== */
+
+.tabla_catalogo_bicis_d_ruta,
+.tabla_catalogo_bicis_electricas {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    background-color: var(--blanco);
+    color: var(--negro);
+
+    border: 1px solid var(--gris);
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.20);
+}
+
+
+/* ========================================
+   ENCABEZADOS DE LAS TABLAS
+======================================== */
+
+.tabla_catalogo_bicis_d_ruta th,
+.tabla_catalogo_bicis_electricas th {
+    padding: 20px 15px;
+
+    background-color: var(--rojo);
+    color: var(--blanco);
+
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    border-bottom: 3px solid var(--rojo-oscuro);
+}
+
+.tabla_catalogo_bicis_d_ruta th:last-child,
+.tabla_catalogo_bicis_electricas th:last-child {
+    border-right: none;
+}
+
+
+/* ========================================
+   CELDAS DE LAS TABLAS
+======================================== */
+
+.tabla_catalogo_bicis_d_ruta td,
+.tabla_catalogo_bicis_electricas td {
+    padding: 17px 12px;
+
+    color: var(--negro);
+    font-size: 16px;
+    text-align: center;
+
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+
+    transition: background-color 0.25s ease,
+                color 0.25s ease;
+}
+
+.tabla_catalogo_bicis_d_ruta td:last-child,
+.tabla_catalogo_bicis_electricas td:last-child {
+    border-right: none;
+}
+
+
+/* ========================================
+   FILAS ALTERNADAS
+======================================== */
+
+.tabla_catalogo_bicis_d_ruta tr:nth-child(even) td,
+.tabla_catalogo_bicis_electricas tr:nth-child(even) td {
+    background-color: var(--gris-claro);
+}
+
+.tabla_catalogo_bicis_d_ruta tr:nth-child(odd) td,
+.tabla_catalogo_bicis_electricas tr:nth-child(odd) td {
+    background-color: var(--blanco);
+}
+
+
+/* ========================================
+   EFECTOS AL PASAR EL CURSOR
+======================================== */
+
+.tabla_catalogo_bicis_d_ruta tr:hover td,
+.tabla_catalogo_bicis_electricas tr:hover td {
+    background-color: #ffe5e7;
+    color: var(--rojo-oscuro);
+}
+
+
+/* ========================================
+   ETIQUETAS DE LOS COLORES
+======================================== */
+
+.tabla_catalogo_bicis_d_ruta td span,
+.tabla_catalogo_bicis_electricas td span {
+    display: inline-block;
+    padding: 6px 12px;
+
+    background-color: var(--blanco);
+    color: var(--negro);
+
+    border: 1px solid var(--gris);
+    border-radius: 20px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: background-color 0.25s ease,
+                color 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.tabla_catalogo_bicis_d_ruta tr:hover td span,
+.tabla_catalogo_bicis_electricas tr:hover td span {
+    background-color: var(--rojo);
+    color: var(--blanco);
+    border-color: var(--rojo);
+}
+
+
+/* ========================================
+   ÚLTIMA FILA DE LAS TABLAS
+======================================== */
+
+.tabla_catalogo_bicis_d_ruta tr:last-child td,
+.tabla_catalogo_bicis_electricas tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* ========================================
+   SEPARADOR ROJO
+======================================== */
+
+hr {
+    height: 5px;
+    border: none;
+    background-color: var(--rojo);
+
+    margin-top: 45px;
+}
+
+
+/* ========================================
+   FOOTER - PIE DE PÁGINA
+======================================== */
+
+.footer_de_la_pagina {
+    width: 100%;
+    margin-top: 45px;
+    padding: 40px 8%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    background-color: var(--negro);
+    color: var(--blanco);
+
+    text-align: center;
+    border-top: 5px solid var(--rojo);
+}
+
+.footer_de_la_pagina p {
+    width: 100%;
+    color: var(--blanco);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.footer_de_la_pagina iframe {
+    display: block;
+
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+
+    margin-top: 15px;
+
+    border: 2px solid var(--rojo) !important;
+    border-radius: 10px;
+}
+
+
+/* ========================================
+   DISEÑO RESPONSIVE - TABLETAS
+======================================== */
+
+@media (max-width: 900px) {
+
+    .Encabezado {
+        justify-content: center;
+        flex-direction: column;
+        padding: 15px 4%;
+    }
+
+    .Logo {
+        width: 160px;
+    }
+
+    .Encabezado nav ul {
+        gap: 5px;
+    }
+
+    .Encabezado nav ul li a {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+
+    .seccion1_catalogo_tabla_bdr,
+    .seccion2_catalogo_tabla_be {
+        padding: 40px 4%;
+    }
+
+    .seccion2_catalogo_tabla_be {
+        margin-top: 35px;
+    }
+
+    .texto_seccion1_catalogo h1,
+    .texto_seccion2_catalogo h1 {
+        font-size: 26px;
+    }
+
+    .tabla_catalogo_bicis_d_ruta,
+    .tabla_catalogo_bicis_electricas {
+        min-width: 760px;
+    }
+
+    .footer_de_la_pagina {
+        margin-top: 35px;
+        padding: 35px 5%;
+    }
+}
+
+
+/* ========================================
+   DISEÑO RESPONSIVE - CELULARES
+======================================== */
+
+@media (max-width: 600px) {
+
+    .Encabezado {
+        padding: 15px 3%;
+    }
+
+    .Logo {
+        width: 145px;
+    }
+
+    .Encabezado nav {
+        width: 100%;
+    }
+
+    .Encabezado nav ul {
+        width: 100%;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .Encabezado nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .Encabezado nav ul li a {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .seccion1_catalogo_tabla_bdr,
+    .seccion2_catalogo_tabla_be {
+        padding: 30px 15px;
+    }
+
+    .seccion2_catalogo_tabla_be {
+        margin-top: 30px;
+    }
+
+    .texto_seccion1_catalogo,
+    .texto_seccion2_catalogo {
+        margin-bottom: 25px;
+    }
+
+    .texto_seccion1_catalogo h1,
+    .texto_seccion2_catalogo h1 {
+        font-size: 22px;
+    }
+
+    .tabla_catalogo_bicis_d_ruta,
+    .tabla_catalogo_bicis_electricas {
+        min-width: 760px;
+    }
+
+    .tabla_catalogo_bicis_d_ruta th,
+    .tabla_catalogo_bicis_electricas th {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+
+    .tabla_catalogo_bicis_d_ruta td,
+    .tabla_catalogo_bicis_electricas td {
+        padding: 13px 10px;
+        font-size: 14px;
+    }
+
+    .tabla_catalogo_bicis_d_ruta td span,
+    .tabla_catalogo_bicis_electricas td span {
+        font-size: 12px;
+        padding: 5px 9px;
+    }
+
+    hr {
+        margin-top: 30px;
+    }
+
+    .footer_de_la_pagina {
+        margin-top: 30px;
+        padding: 30px 6%;
+    }
+
+    .footer_de_la_pagina p {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    .footer_de_la_pagina iframe {
+        height: 280px;
+    }
+}

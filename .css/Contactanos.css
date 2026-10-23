@@ -1,0 +1,364 @@
+/* ==========================================
+   ESTILOS GENERALES - ROJO BIKE
+   ========================================== */
+
+:root {
+    --rojo: #e31824;
+    --rojo-oscuro: #b5121b;
+    --negro: #111111;
+    --negro-claro: #1c1c1c;
+    --blanco: #ffffff;
+    --gris-claro: #f2f2f2;
+    --gris: #cccccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--gris-claro);
+    color: var(--negro);
+    line-height: 1.6;
+}
+
+/* ==========================================
+   ENCABEZADO
+   ========================================== */
+
+.Encabezado {
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 35px;
+    background-color: var(--blanco);
+    border-bottom: 5px solid var(--rojo);
+}
+
+.Logo {
+    width: 180px;
+    height: 130px;
+    object-fit: contain;
+}
+
+/* Navegación */
+
+.Encabezado nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+}
+
+.Encabezado nav ul li a {
+    display: block;
+    padding: 10px 13px;
+    color: var(--negro);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.Encabezado nav ul li a:hover {
+    background-color: var(--rojo);
+    color: var(--blanco);
+}
+
+/* ==========================================
+   CONTENIDO PRINCIPAL
+   ========================================== */
+
+main {
+    min-height: 600px;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gris-claro);
+}
+
+/* ==========================================
+   FORMULARIO DE CONTACTO
+   ========================================== */
+
+.formulario_contacto {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: var(--blanco);
+    border-top: 7px solid var(--rojo);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Título del formulario */
+
+.formulario_contacto::before {
+    content: "CONTÁCTANOS";
+    display: block;
+    margin-bottom: 10px;
+    color: var(--rojo);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.formulario_contacto::after {
+    content: "Completa el formulario y nos pondremos en contacto contigo.";
+    display: block;
+    margin-top: 20px;
+    color: #666666;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* Organización del formulario */
+
+.formulario_contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Etiquetas */
+
+.formulario_contacto label {
+    margin-top: 8px;
+    color: var(--negro);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Campos de texto, fecha, teléfono, correo y área de mensaje */
+
+.formulario_contacto input[type="text"],
+.formulario_contacto input[type="tel"],
+.formulario_contacto input[type="email"],
+.formulario_contacto input[type="date"],
+.formulario_contacto textarea {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: var(--negro);
+    background-color: var(--blanco);
+    border: 2px solid var(--gris);
+    border-radius: 7px;
+    outline: none;
+    transition: border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+/* Efecto al pasar el cursor */
+
+.formulario_contacto input:hover,
+.formulario_contacto textarea:hover {
+    border-color: var(--rojo);
+}
+
+/* Efecto al seleccionar un campo */
+
+.formulario_contacto input:focus,
+.formulario_contacto textarea:focus {
+    border-color: var(--rojo);
+    box-shadow: 0 0 0 4px rgba(227, 24, 36, 0.13);
+    background-color: #fffafa;
+}
+
+/* Icono del calendario */
+
+.formulario_contacto input[type="date"] {
+    cursor: pointer;
+    min-height: 45px;
+}
+
+.formulario_contacto input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.formulario_contacto input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    background-color: rgba(227, 24, 36, 0.12);
+}
+
+/* Área de mensaje */
+
+.formulario_contacto textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* Botón Enviar */
+
+.formulario_contacto button[type="submit"] {
+    width: 100%;
+    margin-top: 15px;
+    padding: 14px;
+    color: var(--blanco);
+    background-color: var(--rojo);
+    border: 2px solid var(--rojo);
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.formulario_contacto button[type="submit"]:hover {
+    background-color: var(--rojo-oscuro);
+    border-color: var(--rojo-oscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(227, 24, 36, 0.25);
+}
+
+.formulario_contacto button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* ==========================================
+   PIE DE PÁGINA
+   ========================================== */
+
+.footer_de_la_pagina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 35px 20px;
+    color: var(--blanco);
+    background-color: var(--negro);
+    border-top: 5px solid var(--rojo);
+    text-align: center;
+}
+
+.footer_de_la_pagina p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.footer_de_la_pagina iframe {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    margin-top: 15px;
+    border: 2px solid var(--rojo) !important;
+    border-radius: 8px;
+}
+
+/* ==========================================
+   DISEÑO RESPONSIVE - TABLETAS
+   ========================================== */
+
+@media (max-width: 900px) {
+    .Encabezado {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .Logo {
+        width: 160px;
+        height: 110px;
+    }
+
+    .Encabezado nav ul {
+        gap: 5px;
+    }
+
+    .Encabezado nav ul li a {
+        font-size: 13px;
+        padding: 9px 10px;
+    }
+
+    main {
+        padding: 35px 15px;
+    }
+
+    .formulario_contacto {
+        max-width: 600px;
+    }
+}
+
+/* ==========================================
+   DISEÑO RESPONSIVE - CELULARES
+   ========================================== */
+
+@media (max-width: 600px) {
+    .Encabezado {
+        padding: 10px;
+    }
+
+    .Logo {
+        width: 140px;
+        height: 100px;
+    }
+
+    .Encabezado nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .Encabezado nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .Encabezado nav ul li a {
+        width: 100%;
+        padding: 10px;
+    }
+
+    main {
+        min-height: auto;
+        padding: 25px 12px;
+    }
+
+    .formulario_contacto {
+        padding: 22px 17px;
+    }
+
+    .formulario_contacto::before {
+        font-size: 25px;
+    }
+
+    .formulario_contacto label {
+        font-size: 14px;
+    }
+
+    .formulario_contacto input[type="text"],
+    .formulario_contacto input[type="tel"],
+    .formulario_contacto input[type="email"],
+    .formulario_contacto input[type="date"],
+    .formulario_contacto textarea {
+        padding: 11px;
+        font-size: 14px;
+    }
+
+    .footer_de_la_pagina {
+        padding: 25px 12px;
+    }
+
+    .footer_de_la_pagina p {
+        font-size: 13px;
+        overflow-wrap: anywhere;
+    }
+
+    .footer_de_la_pagina iframe {
+        height: 280px;
+    }
+}
