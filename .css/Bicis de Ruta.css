@@ -1,0 +1,406 @@
+
+/* ========================================
+   ESTILOS GENERALES - ROJO BIKE
+======================================== */
+
+:root {
+    --rojo: #e31824;
+    --rojo-oscuro: #b5121b;
+    --negro: #111111;
+    --negro-claro: #1c1c1c;
+    --blanco: #ffffff;
+    --gris-claro: #f2f2f2;
+    --gris: #cccccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--blanco);
+    color: var(--negro);
+}
+
+
+/* ========================================
+   ENCABEZADO Y MENÚ DE NAVEGACIÓN
+======================================== */
+
+.Encabezado {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px 5%;
+    background-color: var(--blanco);
+    border-bottom: 5px solid var(--rojo);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.Logo {
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.Encabezado nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.Encabezado nav ul li {
+    display: inline-block;
+}
+
+.Encabezado nav ul li a {
+    display: block;
+    padding: 12px 16px;
+    color: var(--negro);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+.Encabezado nav ul li a:hover {
+    background-color: var(--rojo);
+    color: var(--blanco);
+}
+
+
+/* ========================================
+   SECCIÓN 1 - PRESENTACIÓN
+======================================== */
+
+.seccion1_b_d_r {
+    width: 100%;
+    padding: 60px 8%;
+    background-color: var(--negro);
+    color: var(--blanco);
+    text-align: center;
+    border-bottom: 5px solid var(--rojo);
+}
+
+.seccion1_b_d_r h1 {
+    margin-bottom: 20px;
+    color: var(--rojo);
+    font-size: 38px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.seccion1_b_d_r p {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--blanco);
+}
+
+
+/* ========================================
+   SECCIÓN 2 - TARJETAS DE BICICLETAS
+======================================== */
+
+.seccion2_b_d_r_imagenes {
+    width: 100%;
+    padding: 50px 8%;
+    background-color: var(--blanco);
+}
+
+/* Cuadrícula de dos columnas y dos filas */
+
+.seccion2_b_d_r_imagenes > div {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   ESTILOS GENERALES DE CADA TARJETA
+======================================== */
+
+.imagen1_b_d_r,
+.imagen2_b_d_r,
+.imagen_3_b_d_r,
+.imagen4_b_d_r {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    width: 100%;
+    padding: 25px;
+
+    /* Fondo blanco de las tarjetas */
+    background-color: #ffffff;
+
+    border: 1px solid var(--gris);
+    border-bottom: 5px solid var(--rojo);
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el cursor */
+
+.imagen1_b_d_r:hover,
+.imagen2_b_d_r:hover,
+.imagen_3_b_d_r:hover,
+.imagen4_b_d_r:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ========================================
+   IMÁGENES DE LAS BICICLETAS
+======================================== */
+
+.seccion2_b_d_r_imagenes_todas {
+    display: block;
+
+    width: 100%;
+    max-width: 380px;
+    height: 240px;
+
+    margin: 0 auto 20px;
+
+    object-fit: contain;
+    object-position: center;
+}
+
+
+/* ========================================
+   NOMBRES DE LOS PRODUCTOS
+======================================== */
+
+.imagen1_b_d_r h1,
+.imagen2_b_d_r h1,
+.imagen_3_b_d_r h1,
+.imagen4_b_d_r h1 {
+    width: 100%;
+    margin-bottom: 15px;
+
+    color: var(--negro);
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+
+/* ========================================
+   DESCRIPCIONES DE LOS PRODUCTOS
+======================================== */
+
+.imagen1_b_d_r p,
+.imagen2_b_d_r p,
+.imagen_3_b_d_r p,
+.imagen4_b_d_r p {
+    width: 100%;
+    margin-bottom: 20px;
+
+    color: #444444;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   PRECIOS DE LOS PRODUCTOS
+======================================== */
+
+.imagen1_b_d_r h2,
+.imagen2_b_d_r h2,
+.imagen_3_b_d_r h2,
+.imagen4_b_d_r h2 {
+    width: 100%;
+    margin-top: auto;
+
+    color: var(--rojo);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/* ========================================
+   DISEÑO RESPONSIVE PARA TABLETAS
+======================================== */
+
+@media (max-width: 900px) {
+
+    .Encabezado {
+        justify-content: center;
+        flex-direction: column;
+        padding: 15px 4%;
+    }
+
+    .Logo {
+        width: 160px;
+    }
+
+    .Encabezado nav ul {
+        gap: 5px;
+    }
+
+    .Encabezado nav ul li a {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+
+    .seccion1_b_d_r {
+        padding: 45px 5%;
+    }
+
+    .seccion1_b_d_r h1 {
+        font-size: 32px;
+    }
+
+    .seccion2_b_d_r_imagenes {
+        padding: 35px 5%;
+    }
+
+    .seccion2_b_d_r_imagenes > div {
+        gap: 25px;
+    }
+
+    .seccion2_b_d_r_imagenes_todas {
+        height: 210px;
+    }
+}
+
+
+/* ========================================
+   DISEÑO RESPONSIVE PARA CELULARES
+======================================== */
+
+@media (max-width: 600px) {
+
+    .Encabezado {
+        padding: 15px 3%;
+    }
+
+    .Logo {
+        width: 145px;
+    }
+
+    .Encabezado nav {
+        width: 100%;
+    }
+
+    .Encabezado nav ul {
+        width: 100%;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .Encabezado nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .Encabezado nav ul li a {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .seccion1_b_d_r {
+        padding: 35px 6%;
+    }
+
+    .seccion1_b_d_r h1 {
+        font-size: 27px;
+    }
+
+    .seccion1_b_d_r p {
+        font-size: 16px;
+    }
+
+    .seccion2_b_d_r_imagenes {
+        padding: 30px 6%;
+    }
+
+    /* En celulares se muestra una tarjeta por fila */
+
+    .seccion2_b_d_r_imagenes > div {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .imagen1_b_d_r,
+    .imagen2_b_d_r,
+    .imagen_3_b_d_r,
+    .imagen4_b_d_r {
+        padding: 20px;
+    }
+
+    .seccion2_b_d_r_imagenes_todas {
+        height: 220px;
+    }
+
+    .imagen1_b_d_r h1,
+    .imagen2_b_d_r h1,
+    .imagen_3_b_d_r h1,
+    .imagen4_b_d_r h1 {
+        font-size: 21px;
+    }
+
+    .imagen1_b_d_r h2,
+    .imagen2_b_d_r h2,
+    .imagen_3_b_d_r h2,
+    .imagen4_b_d_r h2 {
+        font-size: 23px;
+    }
+}
+
+.footer_de_la_pagina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 45px 20px;
+    text-align: center;
+    color: var(--blanco);
+    background-color: var(--negro-claro);
+}
+
+.footer_de_la_pagina p {
+    margin: 0;
+    color: var(--blanco);
+    font-size: 1rem;
+    overflow-wrap: anywhere;
+}
+
+body > hr {
+    display: block;
+    height: 5px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: var(--rojo);
+}
+
+.seccion1_b_d_r strong {
+    color: var(--rojo);
+}

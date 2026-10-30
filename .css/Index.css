@@ -1,0 +1,307 @@
+
+/* =========================================
+   ROJO BIKE - DISEÑO PRINCIPAL
+   Colores: negro, blanco y rojo
+   ========================================= */
+
+:root {
+    --rojo: #e31824;
+    --rojo-oscuro: #b5121b;
+    --negro: #111111;
+    --negro-claro: #1c1c1c;
+    --blanco: #ffffff;
+    --gris-claro: #f2f2f2;
+    --gris: #cccccc;
+}
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--negro);
+    background-color: var(--blanco);
+    line-height: 1.6;
+}
+
+main {
+    width: 100%;
+}
+
+/* =========================================
+   ENCABEZADO
+   Logo a la izquierda y menú a la derecha
+   ========================================= */
+
+.Encabezado {
+    width: 100%;
+    min-height: 125px;
+    padding: 10px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: var(--blanco);
+    border-bottom: 5px solid var(--rojo);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* LOGO */
+
+.Logo {
+    display: block;
+    width: 180px;
+    height: auto;
+    max-height: 125px;
+    object-fit: contain;
+    background-color: transparent;
+}
+
+/* MENÚ DE NAVEGACIÓN */
+
+.Encabezado nav {
+    margin-left: auto;
+}
+
+.Encabezado nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Encabezado nav li {
+    margin: 0;
+    padding: 0;
+}
+
+.Encabezado nav a {
+    display: block;
+    padding: 10px 13px;
+    color: var(--negro);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    border-radius: 5px;
+    transition: background-color 0.25s ease,
+                color 0.25s ease;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+
+.Encabezado nav a:hover,
+.Encabezado nav a:focus-visible {
+    color: var(--blanco);
+    background-color: var(--rojo);
+    outline: none;
+}
+
+/* =========================================
+   PRIMERA SECCIÓN
+   Fondo negro y texto centrado
+   ========================================= */
+
+.seccion1_index {
+    padding: 85px 20px;
+    text-align: center;
+    color: var(--blanco);
+    background-color: var(--negro);
+    border-bottom: 5px solid var(--rojo);
+}
+
+.seccion1_index h1 {
+    margin: 0 0 18px;
+    color: var(--rojo);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.15;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.seccion1_index p {
+    max-width: 750px;
+    margin: 0 auto;
+    color: var(--blanco);
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+}
+
+.seccion1_index strong {
+    color: var(--rojo);
+}
+
+/* =========================================
+   SEGUNDA SECCIÓN
+   Fondo blanco y texto oscuro
+   ========================================= */
+
+.seccion2_index {
+    padding: 75px 20px;
+    text-align: center;
+    color: var(--negro);
+    background-color: var(--blanco);
+    border-bottom: 5px solid var(--rojo);
+}
+
+.seccion2_index h2 {
+    margin: 0 0 20px;
+    color: var(--negro);
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+}
+
+/* Línea roja decorativa bajo el título */
+
+.seccion2_index h2::after {
+    content: "";
+    display: block;
+    width: 85px;
+    height: 4px;
+    margin: 14px auto 0;
+    background-color: var(--rojo);
+    border-radius: 4px;
+}
+
+.seccion2_index p {
+    max-width: 850px;
+    margin: 0 auto;
+    color: #333333;
+    font-size: 1.1rem;
+}
+
+.seccion2_index em {
+    color: var(--rojo-oscuro);
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* =========================================
+   LÍNEA ROJA ANTES DEL FOOTER
+   Corresponde al <hr> del HTML
+   ========================================= */
+
+body > hr {
+    display: block;
+    height: 5px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: var(--rojo);
+}
+
+/* =========================================
+   FOOTER
+   Fondo negro y contenido centrado
+   ========================================= */
+
+.footer_de_la_pagina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 45px 20px;
+    text-align: center;
+    color: var(--blanco);
+    background-color: var(--negro-claro);
+}
+
+.footer_de_la_pagina p {
+    margin: 0;
+    color: var(--blanco);
+    font-size: 1rem;
+    overflow-wrap: anywhere;
+}
+
+/* MAPA DE GOOGLE */
+
+.footer_de_la_pagina iframe {
+    display: block;
+    width: min(100%, 600px);
+    height: 350px;
+    margin-top: 18px;
+    border: 2px solid var(--rojo);
+    border-radius: 10px;
+}
+
+/* =========================================
+   DISEÑO PARA TABLETAS
+   ========================================= */
+
+@media (max-width: 900px) {
+    .Encabezado {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        padding: 15px 4%;
+    }
+
+    .Logo {
+        width: 155px;
+        max-height: 110px;
+    }
+
+    .Encabezado nav {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .Encabezado nav ul {
+        justify-content: center;
+    }
+
+    .Encabezado nav a {
+        padding: 9px 10px;
+    }
+
+    .seccion1_index {
+        padding: 65px 20px;
+    }
+
+    .seccion2_index {
+        padding: 60px 20px;
+    }
+}
+
+/* =========================================
+   DISEÑO PARA CELULARES
+   ========================================= */
+
+@media (max-width: 520px) {
+    .Encabezado nav ul {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .Encabezado nav li,
+    .Encabezado nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .seccion1_index {
+        padding: 55px 18px;
+    }
+
+    .seccion2_index {
+        padding: 50px 18px;
+    }
+
+    .footer_de_la_pagina {
+        padding: 35px 16px;
+    }
+
+    .footer_de_la_pagina iframe {
+        height: 280px;
+    }
+}

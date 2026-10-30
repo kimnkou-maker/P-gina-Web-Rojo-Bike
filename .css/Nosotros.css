@@ -1,0 +1,424 @@
+/* ========================================
+   ESTILOS GENERALES - ROJO BIKE
+======================================== */
+
+:root {
+    --rojo: #e31824;
+    --rojo-oscuro: #b5121b;
+    --negro: #111111;
+    --negro-claro: #1c1c1c;
+    --blanco: #ffffff;
+    --gris-claro: #f2f2f2;
+    --gris: #cccccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--blanco);
+    color: var(--negro);
+}
+
+
+/* ========================================
+   ENCABEZADO Y MENÚ DE NAVEGACIÓN
+======================================== */
+
+.Encabezado {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    background-color: var(--blanco);
+    border-bottom: 5px solid var(--rojo);
+}
+
+.Logo {
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.Encabezado nav ul {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.Encabezado nav ul li {
+    display: inline-block;
+}
+
+.Encabezado nav ul li a {
+    display: block;
+    padding: 12px 16px;
+
+    color: var(--negro);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+
+    border-radius: 5px;
+
+    transition: background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.Encabezado nav ul li a:hover {
+    background-color: var(--rojo);
+    color: var(--blanco);
+}
+
+
+/* ========================================
+   CONTENEDOR PRINCIPAL
+======================================== */
+
+main {
+    width: 100%;
+    background-color: var(--blanco);
+}
+
+
+/* ========================================
+   SECCIÓN 1 - SOBRE NOSOTROS
+======================================== */
+
+.seccion1_nosotros {
+    width: 100%;
+    padding: 65px 8%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--negro);
+    color: var(--blanco);
+
+    border-bottom: 5px solid var(--rojo);
+}
+
+.seccion_1_nosotros_texto {
+    width: 100%;
+    max-width: 1000px;
+    padding: 35px;
+
+    background-color: var(--negro-claro);
+
+    border-left: 6px solid var(--rojo);
+    border-radius: 8px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.seccion_1_nosotros_texto h1 {
+    margin-bottom: 30px;
+
+    color: var(--rojo);
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.seccion_1_nosotros_texto h1::after {
+    content: "";
+
+    display: block;
+    width: 100px;
+    height: 4px;
+
+    margin: 18px auto 0;
+
+    background-color: var(--rojo);
+    border-radius: 5px;
+}
+
+.seccion_1_nosotros_texto p {
+    margin-bottom: 20px;
+
+    color: var(--blanco);
+    font-size: 18px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.seccion_1_nosotros_texto p:last-child {
+    margin-top: 25px;
+    margin-bottom: 0;
+
+    color: var(--rojo);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* ========================================
+   SECCIÓN 2 - RECOMENDACIÓN MUSICAL
+======================================== */
+
+.seccion2_nosotros {
+    width: 100%;
+    padding: 60px 8%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--gris-claro);
+    border-bottom: 5px solid var(--rojo);
+}
+
+.seccion2_nosotros_audio_texto {
+    width: 100%;
+    max-width: 850px;
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+
+    background-color: var(--blanco);
+
+    border: 1px solid var(--gris);
+    border-top: 5px solid var(--rojo);
+    border-radius: 12px;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.seccion2_nosotros_audio_texto p {
+    color: var(--negro);
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.seccion2_nosotros_audio_texto audio {
+    display: block;
+
+    width: 100%;
+    max-width: 500px;
+
+    accent-color: var(--rojo);
+}
+
+
+/* ========================================
+   SEPARADOR ROJO
+======================================== */
+
+hr {
+    height: 5px;
+    border: none;
+    background-color: var(--rojo);
+}
+
+
+/* ========================================
+   FOOTER - PIE DE PÁGINA
+======================================== */
+
+.footer_de_la_pagina {
+    width: 100%;
+    margin-top: 30px;
+    padding: 40px 8%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    background-color: var(--negro);
+    color: var(--blanco);
+
+    text-align: center;
+    border-top: 5px solid var(--rojo);
+}
+
+.footer_de_la_pagina p {
+    width: 100%;
+
+    color: var(--blanco);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.footer_de_la_pagina iframe {
+    display: block;
+
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+
+    margin-top: 15px;
+
+    border: 2px solid var(--rojo) !important;
+    border-radius: 10px;
+}
+
+
+/* ========================================
+   DISEÑO RESPONSIVE - TABLETAS
+======================================== */
+
+@media (max-width: 900px) {
+
+    .Encabezado {
+        justify-content: center;
+        flex-direction: column;
+        padding: 15px 4%;
+    }
+
+    .Logo {
+        width: 160px;
+    }
+
+    .Encabezado nav ul {
+        gap: 5px;
+    }
+
+    .Encabezado nav ul li a {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+
+    .seccion1_nosotros {
+        padding: 45px 5%;
+    }
+
+    .seccion_1_nosotros_texto {
+        padding: 30px;
+    }
+
+    .seccion_1_nosotros_texto h1 {
+        font-size: 30px;
+    }
+
+    .seccion_1_nosotros_texto p {
+        font-size: 17px;
+    }
+
+    .seccion2_nosotros {
+        padding: 45px 5%;
+    }
+
+    .seccion2_nosotros_audio_texto {
+        padding: 30px;
+    }
+
+    .footer_de_la_pagina {
+        padding: 35px 5%;
+    }
+}
+
+
+/* ========================================
+   DISEÑO RESPONSIVE - CELULARES
+======================================== */
+
+@media (max-width: 600px) {
+
+    .Encabezado {
+        padding: 15px 3%;
+    }
+
+    .Logo {
+        width: 145px;
+    }
+
+    .Encabezado nav {
+        width: 100%;
+    }
+
+    .Encabezado nav ul {
+        width: 100%;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .Encabezado nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .Encabezado nav ul li a {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .seccion1_nosotros {
+        padding: 30px 15px;
+    }
+
+    .seccion_1_nosotros_texto {
+        padding: 25px 20px;
+        border-left-width: 4px;
+    }
+
+    .seccion_1_nosotros_texto h1 {
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+
+    .seccion_1_nosotros_texto p {
+        font-size: 15px;
+        line-height: 1.8;
+        text-align: left;
+    }
+
+    .seccion_1_nosotros_texto p:last-child {
+        font-size: 17px;
+    }
+
+    .seccion2_nosotros {
+        padding: 30px 15px;
+    }
+
+    .seccion2_nosotros_audio_texto {
+        padding: 25px 18px;
+        gap: 20px;
+    }
+
+    .seccion2_nosotros_audio_texto p {
+        font-size: 18px;
+    }
+
+    .seccion2_nosotros_audio_texto audio {
+        width: 100%;
+    }
+
+    .footer_de_la_pagina {
+        margin-top: 20px;
+        padding: 30px 6%;
+    }
+
+    .footer_de_la_pagina p {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    .footer_de_la_pagina iframe {
+        height: 280px;
+    }
+}

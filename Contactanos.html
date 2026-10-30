@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=".css/Contactanos.css">
+</head>
+
+<body>
+    <!--En este apartado está el encabezado de la página-->
+    <header class="Encabezado">
+        <img src="Multimedia/Rojo Bike Logo Sin Fondo.png" class="Logo" alt="Logo Rojo Bike" width="200px"
+            height="150px" />
+
+        <nav>
+
+            <ul>
+
+                <li><a href="Index.html">Inicio</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="Catalogo.html">Catálago</a></li>
+                <li><a href="Contactanos.html">Contactanos</a></li>
+                <li><a href="Bicis de Ruta.html">Bicicletas de Ruta</a></li>
+                <li><a href="Electricas.html">Bicicletas Electricas</a></li>
+
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <!--En esta sección está el formulario para contactarnos con los clientes-->
+        <div class="formulario_contacto">
+
+            <form>
+                <label for="nombre">Nombres:</label>
+                <input type="text" id="nombre" name="nombre" required><br>
+
+                <label for="apellido">Apellidos:</label>
+                <input type="text" id="apellido" name="apellido" required><br>
+
+                <label for="telefono">Télefono:</label>
+                <input type="tel" id="telefono" name="telefono" required><br>
+
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label><br>
+                <input type="date" required>
+
+                <label for="direccion">Dirección de Domicilio:</label><br>
+                <input type="text" required>
+
+
+                <label for="email">Correo Electronico:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje"></textarea><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+        </div>
+
+    </main>
+
+    <!--En esta sección está el footer de la página-->
+    <footer class="footer_de_la_pagina">
+        <p>📞Contactanos: (+57) 3003012324</p>
+        <p>✉️Nuestro Correo Electronico: Rojobike@gmail.com</p>
+        <p>🚩Nuestra Ubicación: Carrera 24G #38F - 63 Envigado</p>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.841085636098!2d-75.57691532627268!3d6.152032127371205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4683a761b00943%3A0x8cdb2b053bc326fa!2sCra.%2024g%20%23%2038F-63%2C%20Envigado%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1792615908525!5m2!1ses-419!2sco"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </footer>
+
+</body>
+
+</html>
